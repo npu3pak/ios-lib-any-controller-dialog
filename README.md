@@ -17,12 +17,12 @@ AnyControllerDialog is available through [CocoaPods](http://cocoapods.org). To i
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "AnyControllerDialog"
+pod "AnyControllerDialog", :git => 'https://github.com/npu3pak/ios-lib-any-controller-dialog.git' 
 ```
 
 ## Author
 
-npu3pak, safronovev@altarix.ru
+Евгений Сафронов, evsafronov.personal@yandex.ru
 
 ## License
 
