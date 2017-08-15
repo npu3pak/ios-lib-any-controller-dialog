@@ -1,25 +1,114 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomDialogs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UJ-EU-sgo">
+                                <rect key="frame" x="144.5" y="318" width="85" height="30"/>
+                                <state key="normal" title="Show Dialog"/>
+                                <connections>
+                                    <action selector="onShowDialogButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oR8-4K-rX2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMg-VY-3Mb">
+                                <rect key="frame" x="101" y="356" width="172" height="30"/>
+                                <state key="normal" title="Show Transparent Dialog"/>
+                                <connections>
+                                    <action selector="onShowTransparentDialogButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fbx-kK-Zwg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BMg-VY-3Mb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1d0-XZ-3xR"/>
+                            <constraint firstItem="BMg-VY-3Mb" firstAttribute="top" secondItem="7UJ-EU-sgo" secondAttribute="bottom" constant="8" id="QnN-dr-VYf"/>
+                            <constraint firstItem="7UJ-EU-sgo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nn2-u6-hNs"/>
+                            <constraint firstItem="7UJ-EU-sgo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uOS-e7-9sH"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-590" y="-8"/>
+        </scene>
+        <!--Content View Controller-->
+        <scene sceneID="nHw-Cv-8NY">
+            <objects>
+                <viewController storyboardIdentifier="DialogContent" id="ZOV-BL-UA1" customClass="ContentViewController" customModule="CustomDialogs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SPB-De-dpr"/>
+                        <viewControllerLayoutGuide type="bottom" id="qCR-ul-u9r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y92-A1-Sfx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tA5-SE-DS5">
+                                <rect key="frame" x="168" y="318" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="onCloseButtonClick:" destination="ZOV-BL-UA1" eventType="touchUpInside" id="fB3-nb-gpT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83717444363613824" green="0.94357315502064454" blue="0.97590661350304575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tA5-SE-DS5" firstAttribute="centerY" secondItem="y92-A1-Sfx" secondAttribute="centerY" id="0ZQ-Ca-CBE"/>
+                            <constraint firstItem="tA5-SE-DS5" firstAttribute="centerX" secondItem="y92-A1-Sfx" secondAttribute="centerX" id="6AI-Ol-EvQ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2gV-rQ-zgr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="486" y="-595"/>
+        </scene>
+        <!--Content View Controller-->
+        <scene sceneID="8hw-76-boO">
+            <objects>
+                <viewController storyboardIdentifier="TransparentDialogContent" id="5aI-fu-ZH8" customClass="ContentViewController" customModule="CustomDialogs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jdx-QU-Ufj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Quk-wt-Oa7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BHZ-Ca-GGo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUS-Iw-C1e">
+                                <rect key="frame" x="168" y="318" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="onCloseButtonClick:" destination="5aI-fu-ZH8" eventType="touchUpInside" id="Cvh-i3-H4h"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="mUS-Iw-C1e" firstAttribute="centerY" secondItem="BHZ-Ca-GGo" secondAttribute="centerY" id="0oL-1r-d3O"/>
+                            <constraint firstItem="mUS-Iw-C1e" firstAttribute="centerX" secondItem="BHZ-Ca-GGo" secondAttribute="centerX" id="FaD-jy-b7P"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JeV-oz-16e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="486" y="216"/>
         </scene>
     </scenes>
 </document>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12121"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DialogContainerViewController" customModule="AnyControllerDialog">
+            <connections>
+                <outlet property="contentBottomConstraint" destination="svg-0J-Muo" id="Jp9-vb-aqV"/>
+                <outlet property="contentCenterXConstraint" destination="ZKg-Yy-dGW" id="Evp-Vk-fUJ"/>
+                <outlet property="contentCenterYConstraint" destination="dwV-i8-IJD" id="Ynt-9H-Zq9"/>
+                <outlet property="contentHeightConstraint" destination="PlP-ia-tWf" id="RA2-M6-XPp"/>
+                <outlet property="contentLeftConstraint" destination="it3-nm-V4K" id="GtT-0K-s5V"/>
+                <outlet property="contentRightConstraint" destination="YgC-0M-yTC" id="3W1-zX-vGn"/>
+                <outlet property="contentTopConstraint" destination="5Rj-ad-2qq" id="xQO-aM-dt9"/>
+                <outlet property="contentView" destination="5Er-HN-kNS" id="gh2-bY-DRz"/>
+                <outlet property="contentWidthConstraint" destination="lal-SY-6J2" id="A57-VM-2zC"/>
+                <outlet property="view" destination="iN0-l3-epB" id="KdO-HJ-yDn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Er-HN-kNS">
+                    <rect key="frame" x="9" y="9" width="357" height="649"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="649" id="PlP-ia-tWf"/>
+                        <constraint firstAttribute="width" constant="357" id="lal-SY-6J2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="5Er-HN-kNS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="9" id="5Rj-ad-2qq"/>
+                <constraint firstAttribute="trailing" secondItem="5Er-HN-kNS" secondAttribute="trailing" constant="9" id="YgC-0M-yTC"/>
+                <constraint firstItem="5Er-HN-kNS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ZKg-Yy-dGW"/>
+                <constraint firstItem="5Er-HN-kNS" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="dwV-i8-IJD"/>
+                <constraint firstItem="5Er-HN-kNS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="9" id="it3-nm-V4K"/>
+                <constraint firstAttribute="bottom" secondItem="5Er-HN-kNS" secondAttribute="bottom" constant="9" id="svg-0J-Muo"/>
+            </constraints>
+            <point key="canvasLocation" x="-270" y="-14"/>
+        </view>
+    </objects>
+</document>
