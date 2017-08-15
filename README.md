@@ -13,6 +13,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+Swift 3, iOS 8+
+
 ## Installation
 
 AnyControllerDialog is available through [CocoaPods](http://cocoapods.org). To install
