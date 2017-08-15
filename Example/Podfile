@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'AnyControllerDialog_Example' do
+  pod 'AnyControllerDialog', :path => '../'
+
+  target 'AnyControllerDialog_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
