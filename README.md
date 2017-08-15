@@ -9,6 +9,8 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+![Alt Text](https://media.giphy.com/media/26n6WyO2Q8ezgzSla/giphy.gif)
+
 ## Requirements
 
 ## Installation
