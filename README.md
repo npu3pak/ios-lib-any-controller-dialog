@@ -20,6 +20,25 @@ it, simply add the following line to your Podfile:
 pod "AnyControllerDialog", :git => 'https://github.com/npu3pak/ios-lib-any-controller-dialog.git' 
 ```
 
+## Usage
+
+1. Import library
+```swift
+import AnyControllerDialog
+```
+2. Instantiate view controller that you want to display as dialog:
+```swift
+let dialogContentController = storyboard?.instantiateViewController(withIdentifier: "DialogContent")
+```
+3. Show controller as dialog:
+```swift
+showDialog(dialogContentController!, height: 200, width: 200, top: 70, completion: {print("Presented!")})
+```
+4. Dismiss controller properly:
+```swift
+dismissDialog(dialogContentController, completion: {print("Dismissed!")})
+```
+
 ## Author
 
 Евгений Сафронов, evsafronov.personal@yandex.ru
