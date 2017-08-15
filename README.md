@@ -30,14 +30,18 @@ pod "AnyControllerDialog", :git => 'https://github.com/npu3pak/ios-lib-any-contr
 ```swift
 import AnyControllerDialog
 ```
+
 2. Instantiate view controller that you want to display as dialog:
 ```swift
 let dialogContentController = storyboard?.instantiateViewController(withIdentifier: "DialogContent")
 ```
-3. Show controller as dialog:
+
+3. From your source view controller call showDialog():
 ```swift
 showDialog(dialogContentController!, height: 200, width: 200, top: 70, completion: {print("Presented!")})
 ```
+This is extension method added by this library. You can call it from view controllers of any type.
+
 4. Dismiss controller properly:
 ```swift
 dismissDialog(dialogContentController, completion: {print("Dismissed!")})
