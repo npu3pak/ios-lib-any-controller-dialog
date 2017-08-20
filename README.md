@@ -36,7 +36,7 @@ import AnyControllerDialog
 let dialogContentController = storyboard?.instantiateViewController(withIdentifier: "DialogContent")
 ```
 
-3. From your source view controller call showDialog():
+3. Call showDialog() method of your source view controller:
 ```swift
 showDialog(dialogContentController!, height: 200, width: 200, top: 70, completion: {print("Presented!")})
 ```
