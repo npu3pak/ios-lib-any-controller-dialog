@@ -79,10 +79,10 @@ class DialogContainerViewController: UIViewController {
             return
         }
         
-        addChildViewController(content)
+        addChild(content)
         contentView.addSubview(content.view)
         content.view.frame = contentView.bounds
-        content.didMove(toParentViewController: self)
+        content.didMove(toParent: self)
     }
     
     private func hideContentInitially() {
@@ -117,15 +117,15 @@ class DialogContainerViewController: UIViewController {
             self.view.backgroundColor = UIColor.black.withAlphaComponent(0)
             self.view.layoutIfNeeded()
         }, completion: { _ in
-            self.removeFromParentViewController()
+            self.removeFromParent()
             self.dismiss(animated: false, completion: completion)
         })
     }
     
     private func removeContentController() {
-        contentController?.willMove(toParentViewController: nil)
+        contentController?.willMove(toParent: nil)
         contentController?.view.removeFromSuperview()
-        contentController?.removeFromParentViewController()
+        contentController?.removeFromParent()
     }
     
     // MARK: - Utils
@@ -150,12 +150,12 @@ fileprivate struct DialogPosition {
 }
 
 public extension UIViewController {
-    public func showDialog(_ contentController: UIViewController, height: CGFloat, width: CGFloat? = nil, top: CGFloat, completion: @escaping ()->Void) {
+    func showDialog(_ contentController: UIViewController, height: CGFloat, width: CGFloat? = nil, top: CGFloat, completion: @escaping ()->Void) {
         let position = DialogPosition(height: height, width: width, top: top)
         DialogContainerViewController.showDialog(contentController, from: self, position: position, completion: completion)
     }
     
-    public func dismissDialog(_ contentController: UIViewController, completion: @escaping ()->Void) {
+    func dismissDialog(_ contentController: UIViewController, completion: @escaping ()->Void) {
         guard let container = contentController.parent as? DialogContainerViewController else {
             print("Unable to dismiss table view controller because of wrong type of its parent controller")
             return
